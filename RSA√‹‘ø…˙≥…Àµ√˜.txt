@@ -1,5 +1,0 @@
-通过 http://mobiletest.yeepay.com/file/caculate/to_rsa 快速生成RSA密钥对。
-
-关于RSA密钥对说明：
-请通过以上的URL生成RSA密钥对，然后进入一键支付商户后台https://www.yeepay.com 根据一键支付的开发接入攻略说明(http://mobiletest.yeepay.com)报备RSA密钥。
-
