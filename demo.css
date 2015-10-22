@@ -1,0 +1,198 @@
+﻿
+body,h1,h2,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr
+	{
+	margin: 1px 1px 1px 1px;
+	padding: 2px 2px 2px 2px;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.indexli {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+img {
+	display: inline-block;
+}
+
+:focus {
+	outline: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var,optgroup {
+	font-style: normal;
+	/*font-weight: normal;*/
+}
+
+abbr,acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+input,button,textarea,select,optgroup,option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input[type="text"],input[type="password"],textarea {
+	outline-style: none;
+	-webkit-appearance: none;
+	border: 1px solid #CCCCCC;
+}
+
+code,kbd,samp,tt {
+	font-size: 100%;
+}
+
+input,button,textarea,select {
+	font-size: 100%;
+}
+
+ol,ul {
+	list-style: none outside none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,th {
+	text-align: left;
+}
+
+sup,sub {
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+:link,:visited,ins {
+	text-decoration: none;
+}
+
+.ml50 {
+	margin-left: 50px;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+a {
+	text-decoration: none;
+	color: #2d76b9;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.recipients-tips {
+	font-family: Tahoma, Arial;
+	position: absolute;
+	background: #fff;
+	z-index: 2147483647;
+	border: 1px solid #555;
+	display: none;
+	min-width: 150px;
+}
+
+.recipients-tips li a {
+	display: block;
+	padding: 4px 15px;
+	color: #333;
+	cursor: pointer;
+	font-family: Tahoma, Arial;
+}
+
+.recipients-tips li a:hover {
+	text-decoration: none;
+}
+
+.recipients-tips li a em {
+	font-weight: 700;
+	color: #000;
+	font-family: Tahoma, Arial;
+}
+
+li.autoSelected {
+	background: #555;
+	font-family: Tahoma, Arial;
+}
+
+li.autoSelected a {
+	color: #fff;
+}
+
+.yijian {
+	margin: 10px auto 0;
+	width: 850px;
+}
+
+.yijian-index {
+	margin: 10px auto 0;
+	margin-top:100px;
+	width: 850px;
+}
+
+.yijianfile {
+	margin: 50px auto 0;
+	position: relative;
+	width: 500px;
+}
+.indexhead{
+	width: 900px;
+	margin-left: auto; 
+	margin-right : auto;
+	position: relative;
+	margin-right: auto;
+}
+
+.indexbody {
+	width: 700px;
+	margin-left: auto; 
+	margin-right : auto;
+	position: relative;
+	margin-right: auto
+}
+
+.content {
+	width: 700px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+	border: 1px solid #CCCCCC;
+}
+
+.content2 {
+	width: 700px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+
+.input-gray-btn, .dis-gray-btn {
+    background-color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    width: 100px;
+}
+
+.input-gray-btn200, .dis-gray-btn200 {
+    background-color: #FF9224;
+    border: 1px solid #CCCCCC;
+}
+
