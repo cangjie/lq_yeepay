@@ -11,7 +11,7 @@ public    class QueryPayResultTest
         {
             
             //商户交易订单号
-            string orderid = "1444557850000701";
+            string orderid = "1444910175000715";
 
             YJPay yjpay = new YJPay();
             //调用sdk请求一键支付接口
