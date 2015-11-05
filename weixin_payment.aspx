@@ -87,7 +87,7 @@
             sd.Add("identitytype", identitytype);
             sd.Add("orderid", orderid);
             sd.Add("orderexpdate", orderexpdate);
-            productcatalog = "13";
+            productcatalog = "1";
             sd.Add("productcatalog", productcatalog);
             sd.Add("productdesc", productdesc);
             sd.Add("productname", productname);
