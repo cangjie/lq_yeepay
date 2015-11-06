@@ -23,6 +23,32 @@ public class Order
         _fields = dt.Rows[0];
 	}
 
+    public string GetCallBackUrl()
+    {
+        string callBackUrl = "";
+
+        string productId = _fields["order_product_id"].ToString().Trim();
+
+
+        switch (_fields["order_body"].ToString().Trim())
+        {
+            case "“放飞梦想我能行”知心姐姐北京精品营再次出发":
+                callBackUrl = "http://www.luqinwenda.com/index.php?app=public&mod=Passport&act=paysuccess2&product_id=" + productId;
+                break;
+            case "卢勤问答平台官方书城":
+                callBackUrl = "http://mall.luqinwenda.com/paySuccess.aspx?product_id=" + productId;
+                break;
+            case "卢勤问答平台官方夏令营":
+                callBackUrl = "http://mall.luqinwenda.com/paySuccess.aspx?product_id=" + productId;
+                break;
+            default:
+                callBackUrl = "http://www.luqinwenda.com/index.php?app=public&mod=Passport&act=paysuccess2&product_id=" + productId;
+                break;
+        }
+
+        return callBackUrl;
+    }
+
     public string PrepayId
     {
         set

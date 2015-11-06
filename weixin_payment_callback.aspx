@@ -19,6 +19,8 @@
 
         Order order = new Order(orderId.ToString());
         order.Status = 2;
+
+        Response.Redirect(order.GetCallBackUrl() + "&paymethod=yeepay", true);
     }
 </script>
 

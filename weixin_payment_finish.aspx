@@ -22,33 +22,8 @@
         Order order = new Order(orderId.ToString());
         order.Status = 2;
 
-        string redirectUrl = "";
-
-        //Response.Write(callback_result + "<br/>" + order._fields["order_body"].ToString().Trim());
-        //Response.End();
-
-        string productId = order._fields["order_product_id"].ToString().Trim();
-        
-        
-        switch (order._fields["order_body"].ToString().Trim())
-        {
-            case "“放飞梦想我能行”知心姐姐北京精品营再次出发":
-                redirectUrl = "http://www.luqinwenda.com/index.php?app=public&mod=Passport&act=paysuccess2&product_id=" + productId;
-                break;
-            case "卢勤问答平台官方书城":
-                redirectUrl = "http://mall.luqinwenda.com/paySuccess.aspx?product_id=" + productId;
-                break;
-            case "卢勤问答平台官方夏令营":
-                redirectUrl = "http://mall.luqinwenda.com/paySuccess.aspx?product_id=" + productId;
-                break;
-            default:
-                redirectUrl = "http://www.luqinwenda.com/index.php?app=public&mod=Passport&act=paysuccess2&product_id=" + productId;
-                break;
-        }
-
-        Response.Redirect(redirectUrl+"&paymethod=yeepay", true);
+        Response.Redirect(order.GetCallBackUrl()+"&paymethod=yeepay", true);
             
-        //Response.Write(callback_result);
     }
 </script>
 

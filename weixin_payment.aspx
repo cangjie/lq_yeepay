@@ -20,7 +20,10 @@
             fee = (Request["total_fee"] == null) ? 0 : int.Parse(Request["total_fee"].Trim());
             userId = (Request["userid"] == null) ? -1* ((new Random()).Next(10000)) :  int.Parse(Request["userid"].Trim());
             string timeStamp = Util.GetTimeStamp();
-            Order.CreateOrder(timeStamp+productId.PadLeft(6,'0'), "", "", "", "", body, detail, productId, fee, Request.UserHostAddress.Trim());
+            
+            string yeepayOrderId = timeStamp+productId.PadLeft(6,'0');
+
+            Order.CreateOrder(yeepayOrderId, "", "", "", "", body, detail, productId, fee, Request.UserHostAddress.Trim());
 
             //请求移动终端网页收银台支付
 
@@ -55,7 +58,7 @@
             //string identityid = "2"//用户身份标识
             int identitytype = 2;
 
-            string orderid = timeStamp + productId.PadLeft(6, '0');
+            string orderid = yeepayOrderId;
             int orderexpdate = 60;//订单有效期，单位：分钟，例如：60，表示订单有效期为60分钟
             string productcatalog = "1";//商品类别码，商户支持的商品类别码由易宝支付运营人员根据商务协议配置
             string productdesc = detail;
