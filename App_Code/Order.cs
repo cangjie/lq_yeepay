@@ -25,8 +25,8 @@ public class Order
 
     public Order(int mallOrderId)
     {
-        SqlDataAdapter da = new SqlDataAdapter(" select * from orders where order_product_id = "
-                + mallOrderId.ToString(), Util.conStr.Trim());
+        SqlDataAdapter da = new SqlDataAdapter(" select * from orders where order_product_id = '"
+                + mallOrderId.ToString()+ "'   ", Util.conStr.Trim());
         DataTable dt = new DataTable();
         da.Fill(dt);
         da.Dispose();
