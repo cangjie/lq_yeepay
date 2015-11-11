@@ -8,12 +8,13 @@
         try
         {
             order.SyncYeepayPaymentStatus();
+            Response.Write("{\"status\":0,\"is_paid\":" + order.Status.ToString().Trim() + "}");
         }
         catch
-        { 
-        
+        {
+            Response.Write("{\"status\":1}");
         }
-        Response.Write("{\"status\":0,\"is_paid\":" + order.Status.ToString().Trim() + "}");
+        
         
     }
 </script>
