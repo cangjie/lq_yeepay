@@ -23,6 +23,16 @@ public class Order
         _fields = dt.Rows[0];
 	}
 
+    public Order(int mallOrderId)
+    {
+        SqlDataAdapter da = new SqlDataAdapter(" select * from orders where order_product_id = "
+                + mallOrderId.ToString(), Util.conStr.Trim());
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        da.Dispose();
+        _fields = dt.Rows[0];
+    }
+
     public string GetCallBackUrl()
     {
         string callBackUrl = "";
@@ -48,6 +58,24 @@ public class Order
 
         return callBackUrl;
     }
+
+    public bool SyncYeepayPaymentStatus()
+    {
+        string orderid = _fields["order_out_trade_no"].ToString().Trim();
+        string yborderid = null;
+        YJPay yjpay = new YJPay();
+        string res = yjpay.queryPayOrderInfo(orderid, yborderid);
+        if (Util.GetSimpleJsonValueByKey(res, "status").Equals("1"))
+        {
+            this.Status = 2;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public string PrepayId
     {
