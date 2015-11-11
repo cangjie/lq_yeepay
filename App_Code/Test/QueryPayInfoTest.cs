@@ -10,7 +10,7 @@ using System.Text;
         public static string testQueryPayInfo()
         {
             //商户交易订单号
-            string orderid = "1446709172000794";
+            string orderid = "1447144759000809";
             string yborderid = null;
 
             YJPay yjpay = new YJPay();
