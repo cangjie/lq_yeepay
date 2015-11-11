@@ -10,7 +10,7 @@
             Order order = new Order(mallOrderId);
             if (order._fields["order_paymethod"].ToString().Equals("yeepay"))
                 order.SyncYeepayPaymentStatus();
-            Response.Write("{\"status\":0,\"is_paid\":" + order.Status.ToString().Trim() + "}");
+            Response.Write("{\"status\":0,\"is_paid\":" + order.Status.ToString().Trim() + ",  \"pay_method\" : \"" + order._fields["order_paymethod"] +  "\"}");
         }
         catch
         {
